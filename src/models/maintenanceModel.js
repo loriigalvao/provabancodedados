@@ -11,7 +11,7 @@ const maintenanceSchema = new Schema({
         ref: Schema.Types.ObjectId,
         required: true
     },
-    services: 
+    services: [
     {
         name: {
             type: String,
@@ -22,8 +22,9 @@ const maintenanceSchema = new Schema({
             type: Number,
             ref: Schema.Types.ObjectId,
             require: false
-        },
+        }
     },
+    ],
     date: {
         type: Date,
         ref: 'date',
@@ -35,7 +36,7 @@ const maintenanceSchema = new Schema({
         required: true
     }
 });
-console.log(maintenanceSchema);
+
 
 export default model ('Maintenance', maintenanceSchema);
 

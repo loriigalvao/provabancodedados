@@ -9,7 +9,7 @@ const workshopSchema = new Schema({
         type: String,
         required: true
     },
-    specialties: {
+    specialties: [{
 
         motor: {
             type: String,
@@ -28,7 +28,7 @@ const workshopSchema = new Schema({
             required: true
         },
         
-    }
+    }]
     });
 
 export default model ('Workshop', workshopSchema);

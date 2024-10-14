@@ -18,7 +18,7 @@ const vehicleSchema = new Schema({
         required: true
     },
     maintenances: {
-        type: Schema.Types.ObjectId,
+        type: [Schema.Types.ObjectId],
         ref: 'maintenances',
         required: false
     }
